@@ -39,7 +39,6 @@ spec:
         stage('Build') {
             steps {
                 echo 'Building..'
-                gcloud auth configure-docker
                 script {
                     docker.withRegistry('https://us-central1-docker.pkg.dev/') {
                         container('docker') {
