@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<title>TikTok Data</title>
+</head>
+<body>
+	<p style="text-align: center;"><b>TikTok Data</b></p>
+
+	<div class="container-fluid" style="padding-right: 2%; padding-left: 2%;">
+
+		<form method="POST" id="data_form">
+			{% csrf_token %}
+			<p style="text-align: center;">Video ID: {{video_id}}</p>
+			<div class="row" style="height: 650px;">
+				<div class="col-4" style="text-align: center;">
+					<label>Video URL</label>
+					<p><blockquote class="tiktok-embed" cite="{{video_tiktok_url}}" data-video-id="{{video_id}}" style="max-width: 605px;min-width: 325px;" > 
+							<section> 
+								<a target="_blank" title="@{{video_user_ID}}">@{{video_user_ID}}</a>
+							</section> 
+						</blockquote> 
+						<script async src="https://www.tiktok.com/embed.js"></script>
+					</p>
+				</div>
+				<div class="col-4" style="text-align: center;">
+					<label>Metadata</label>
+					<ul class="list-group">
+					  <li class="list-group-item"><a href="{{video_tiktok_url}}" class="link-primary" target="_blank">Open video in TikTok</a></li>
+					  <li class="list-group-item">Video Caption: {{video_text}}</li>
+					  <li class="list-group-item">Video Hashtags:</li>
+					  {% for hashtag in video_hashtags %}
+					  	<li class="list-group-item">#{{hashtag}}</li>
+					  {% endfor %}
+					</ul>
+				</div>
+				<div class="col-4" style="text-align: center;">
+					<label>Comments</label>
+					<div class="row">
+						<div id="myDiv"></div>
+						<button type="button" class="btn btn-primary" onclick="myFunction()">Add</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6"></div>
+				<div class="col-6">
+					<input type="hidden" name="video_id" value="{{video_id}}">
+					<button class="btn btn-success" type="submit" formaction="{% url 'datacorpus:save_data' %}" > Save </button>
+					<button class="btn btn-danger" type="submit" formaction="{% url 'datacorpus:delete_data' %}"> Delete </button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var comment_id = 0;
+
+		function myFunction() {
+		  var x = document.getElementById("myDiv");
+		  
+		  if (x.innerHTML == "") {
+		    x.innerHTML = '<div class="row"> <input class="form-control" type="text" name="comment_' + comment_id + '" placeholder="Add Comment" /> </div>';
+		  } else {
+		    x.insertAdjacentHTML('beforeend', '<div class="row"> <input class="form-control" type="text" name="comment_' + comment_id + '" placeholder="Add Comment" /> </div>');
+		  }
+		  comment_id++;
+		}
+	</script>
+</body>
+</html>

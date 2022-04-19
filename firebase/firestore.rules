@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /MemoriesProdV0/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    match /MemoriesProdV0/{userId}/Thoughts/{thought} {
+      allow read: if resource.data.private_link_enabled == true;
+    }
+    match /UserInfoTest/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    match /Feeds/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    match /Shares/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    match /Threads/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    match /FcmTokens/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    match /CreatorProfiles/{userId}/{document=**} {
+      allow read: if true;
+    }
+    match /{path=**}/ThreadVideos/{video} {
+      allow read: if true;
+    }
+    match /TextSuggestionTest/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    match /UserInteractionTest/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
