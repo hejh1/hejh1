@@ -39,6 +39,7 @@ spec:
         stage('Build') {
             steps {
                 echo 'Building..'
+                gcloud auth configure-docker
                 script {
                     docker.withRegistry('https://us-central1-docker.pkg.dev/') {
                         container('docker') {
@@ -48,9 +49,6 @@ spec:
                             // docker build -t youpi/firebase:${env.BUILD_TAG} ./docker/
                             // """
                         }
-                        testImage.inside {
-                            sh 'ls -alt'
-                        }
                     }
                 }
             }
@@ -58,13 +56,6 @@ spec:
         stage('Test') {
             steps {
                 echo 'Testing..'
-                script {
-                    cmdResult = sh(script: '''
-                        firebase emulators:start&
-                        sleep 10
-                        ''', returnStdout: true).trim() as String
-                    println("${cmdResult}")
-                }
             }
         }
         stage('Deploy') {
