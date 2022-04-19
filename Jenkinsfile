@@ -40,7 +40,7 @@ spec:
             steps {
                 echo 'Building..'
                 script {
-                    docker.withRegistry('https://us-central1-docker.pkg.dev/') {
+                    docker.withRegistry('https://us-central1-docker.pkg.dev/','glowing-sprite-347007') {
                         container('docker') {
                             testImage = docker.build("glowing-sprite-347007/quickstart-docker-repo/firebase:${env.BUILD_TAG}", "./docker/")
                             testImage.push()
