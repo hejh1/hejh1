@@ -40,7 +40,7 @@ spec:
             steps {
                 echo 'Building 2..'
                 script {
-                    docker.withRegistry('https://us-central1-docker.pkg.dev/','jenkins-wi-jenkins@glowing-sprite-347007.iam.gserviceaccount.com') {
+                    docker.withRegistry('https://us-central1-docker.pkg.dev/','gcr:jenkins-wi-jenkins') {
                         container('docker') {
                             testImage = docker.build("glowing-sprite-347007/quickstart-docker-repo/firebase:${env.BUILD_TAG}", "./docker/")
                             testImage.push()
