@@ -38,7 +38,7 @@ spec:
         }
         stage('Build') {
             steps {
-                echo 'Building 1..'
+                echo 'Building 2..'
                 script {
                     docker.withRegistry('https://us-central1-docker.pkg.dev/','jenkins-wi-jenkins@glowing-sprite-347007.iam.gserviceaccount.com') {
                         container('docker') {
