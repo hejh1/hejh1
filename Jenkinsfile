@@ -38,7 +38,9 @@ spec:
         }
         stage('Build') {
             steps {
-                echo 'Building 4..'
+                // echo 'Building 4..'
+                docker-credential-gcr configure-docker us-east1-docker.pkg.dev
+                echo 'hello'
                 script {
                     container('docker') {
                         docker.withRegistry('https://gcr.io/',"gcr:glowing-sprite-347007") {
