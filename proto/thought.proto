@@ -1,0 +1,22 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+message Thought {
+    string sessionId = 1;
+    int64 creationTime = 2;
+
+    string serverMergedMediaPath = 11;
+    int64 serverMergedMediaSize = 12;
+    string serverExportedMediaPath = 13;
+    int64 serverExportedMediaSize = 14;
+    string serverThumbnailImagePath = 15;
+    int64 serverThumbnailSize = 16;
+    string serverHDMediaPath = 17;
+    int64 serverHDMediaSize = 18;
+    string serverSDMediaPath = 19;
+    int64 serverSDMediaSize = 20;
+}

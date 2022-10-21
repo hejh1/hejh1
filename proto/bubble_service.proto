@@ -1,0 +1,50 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+import "geo.proto";
+import "thread.proto";
+
+// ClientInfo
+message ClientInfo {
+  string user_id = 1;
+
+  Geo geo = 2;
+
+  string country = 3;
+  string language = 4;
+
+  enum Gender {
+    UNKNOWN = 0;
+    MALE = 1;
+    FEMALE = 2;
+  }
+
+  Gender gender = 5;
+  int32 age = 6;
+}
+
+// Request proto
+message FeedGetRequest {
+  // unique identifier of
+  // a client rquest
+  string request_id = 1;
+
+  // basic client information
+  ClientInfo client_info = 2;
+}
+
+// Response proto for FeedGetRequest
+message FeedGetResponse {
+  string request_id = 1;
+  repeated ThreadVideo thread_videos = 2;
+}
+
+// RPC for DemoService
+service BubbleService {
+  rpc GetFeed(FeedGetRequest) returns (FeedGetResponse);
+//  rpc PostThread(ThreadPostRequest) returns (ThreadPostResponse);
+}

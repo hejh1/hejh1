@@ -1,0 +1,104 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+message ThreadVideo {
+  int64 creationTime = 1;
+  string creatorUid = 2;
+  string shareId = 3;
+  string thoughtId = 4;
+
+  optional int64 likeCount = 11;
+  optional int64 remixCount = 12;
+  optional int64 shareCount = 13;
+  optional string parentShareId = 14;
+  optional string threadId = 15;
+  optional bool mediaReady = 16;
+  optional bool HDReady = 17;
+  optional bool SDReady = 18;
+  optional string appId = 19;
+}
+
+message Thread {
+  // All creators to this thread.
+  repeated string creators = 1;
+  // The last time when one new video is added to the thread.
+  int64 lastUpdateTime = 2;
+  // The original video id that starts the thread.
+  string origShareId = 3;
+  // The original author uid that starts the thread.
+  string origUid = 4;
+  // The start time of the thread.
+  int64 startTime = 5;
+  // The unique id that identifies the thread.
+  string threadId = 6;
+
+  // Title of the thread, editable by author only
+  optional string title = 11;
+  // Descriptions of the thread, editable by author only
+  optional string descriptions = 17;
+  // Descriptions of the thread, editable by author only
+  optional string hashtags = 21;
+  // Descriptions of the thread, editable by author only
+  optional string color = 24;
+  // Total likes count from all thread videos
+  optional int64 totalLikeCount = 12;
+  // Total shares count from all thread videos
+  optional int64 totalShareCount = 13;
+  // Total remix count from all thread videos
+  optional int64 totalRemixCount = 14;
+  // Thread state. Currently supported state: deleting
+  optional string state = 16;
+  // A place name tag to the thread
+  optional string placeName = 18;
+  // A place id to the thread, based on google map definition
+  optional string placeID = 20;
+  // A place coordinate tag to the thread
+  optional Coordinate2D placeCoordinate = 19;
+  // A score representing priority in feed
+  optional double feedScore = 22;
+  // App bundle identifier
+  optional string appId = 23;
+  // A group (community) name
+  optional string groupName = 25;
+  // The language preference of the thread
+  optional string language = 26;
+  // The album video which showcase the highlights of the thread
+  optional string albumVideoPath = 27;
+  // The album video thumbnail
+  optional string albumVideoThumbnailPath = 28;
+}
+
+message ThreadAndVideoTuple {
+  Thread thread = 1;
+  ThreadVideo threadVideo = 2;
+}
+
+message ResponseFeed {
+  string errCode = 1;
+  string errMsg = 2;
+  repeated ThreadAndVideoTuple data = 3;
+}
+
+message ResponseNewestThreads {
+  string ErrCode = 1;
+  string ErrMsg = 2;
+  repeated ThreadVideo Datas = 3;
+}
+
+message Coordinate2D {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message RequestFeed {
+  optional string uid = 1;
+  optional Coordinate2D coordinate = 2;
+  optional string appID = 3;
+  optional string requestID = 4;
+  optional string language = 5;
+  optional string groupName = 6;
+}

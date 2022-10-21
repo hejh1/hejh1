@@ -1,0 +1,21 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+// protoc --go_out=. *.proto
+
+// common Request proto
+message RequestWithoutPage {
+  string IDToken = 1;
+  string CustomToken = 2;
+}
+
+// common Response proto
+message ResponseWithoutPage {
+  string ErrCode = 1;
+  string ErrMsg = 2;
+  string Data = 3;
+}

@@ -1,0 +1,15 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+// Geographic address of a location.
+// Next Tag: 5
+message Geo {
+  double latitude = 1;
+  double longitude = 2;
+  double altitude = 3;
+  double redius_in_meters = 4;
+}
