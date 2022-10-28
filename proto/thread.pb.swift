@@ -27,7 +27,14 @@ struct Proto_ThreadVideo {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var creationTime: Int64 = 0
+  var creationTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _creationTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_creationTime = newValue}
+  }
+  /// Returns true if `creationTime` has been explicitly set.
+  var hasCreationTime: Bool {return self._creationTime != nil}
+  /// Clears the value of `creationTime`. Subsequent reads from it will return its default value.
+  mutating func clearCreationTime() {self._creationTime = nil}
 
   var creatorUid: String = String()
 
@@ -120,6 +127,7 @@ struct Proto_ThreadVideo {
 
   init() {}
 
+  fileprivate var _creationTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _likeCount: Int64? = nil
   fileprivate var _remixCount: Int64? = nil
   fileprivate var _shareCount: Int64? = nil
@@ -143,10 +151,14 @@ struct Proto_Thread {
   }
 
   /// The last time when one new video is added to the thread.
-  var lastUpdateTime: Int64 {
-    get {return _storage._lastUpdateTime}
+  var lastUpdateTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _storage._lastUpdateTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._lastUpdateTime = newValue}
   }
+  /// Returns true if `lastUpdateTime` has been explicitly set.
+  var hasLastUpdateTime: Bool {return _storage._lastUpdateTime != nil}
+  /// Clears the value of `lastUpdateTime`. Subsequent reads from it will return its default value.
+  mutating func clearLastUpdateTime() {_uniqueStorage()._lastUpdateTime = nil}
 
   /// The original video id that starts the thread.
   var origShareID: String {
@@ -161,10 +173,14 @@ struct Proto_Thread {
   }
 
   /// The start time of the thread.
-  var startTime: Int64 {
-    get {return _storage._startTime}
+  var startTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _storage._startTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._startTime = newValue}
   }
+  /// Returns true if `startTime` has been explicitly set.
+  var hasStartTime: Bool {return _storage._startTime != nil}
+  /// Clears the value of `startTime`. Subsequent reads from it will return its default value.
+  mutating func clearStartTime() {_uniqueStorage()._startTime = nil}
 
   /// The unique id that identifies the thread.
   var threadID: String {
@@ -272,7 +288,7 @@ struct Proto_Thread {
   /// Clears the value of `placeID`. Subsequent reads from it will return its default value.
   mutating func clearPlaceID() {_uniqueStorage()._placeID = nil}
 
-  /// A place coordinate tag to the thread
+  /// A place coordinate tag to the thread [retired]
   var placeCoordinate: Proto_Coordinate2D {
     get {return _storage._placeCoordinate ?? Proto_Coordinate2D()}
     set {_uniqueStorage()._placeCoordinate = newValue}
@@ -341,6 +357,26 @@ struct Proto_Thread {
   var hasAlbumVideoThumbnailPath: Bool {return _storage._albumVideoThumbnailPath != nil}
   /// Clears the value of `albumVideoThumbnailPath`. Subsequent reads from it will return its default value.
   mutating func clearAlbumVideoThumbnailPath() {_uniqueStorage()._albumVideoThumbnailPath = nil}
+
+  /// The place latitude
+  var placeLatitude: Double {
+    get {return _storage._placeLatitude ?? 0}
+    set {_uniqueStorage()._placeLatitude = newValue}
+  }
+  /// Returns true if `placeLatitude` has been explicitly set.
+  var hasPlaceLatitude: Bool {return _storage._placeLatitude != nil}
+  /// Clears the value of `placeLatitude`. Subsequent reads from it will return its default value.
+  mutating func clearPlaceLatitude() {_uniqueStorage()._placeLatitude = nil}
+
+  /// The place longitude
+  var placeLongitude: Double {
+    get {return _storage._placeLongitude ?? 0}
+    set {_uniqueStorage()._placeLongitude = newValue}
+  }
+  /// Returns true if `placeLongitude` has been explicitly set.
+  var hasPlaceLongitude: Bool {return _storage._placeLongitude != nil}
+  /// Clears the value of `placeLongitude`. Subsequent reads from it will return its default value.
+  mutating func clearPlaceLongitude() {_uniqueStorage()._placeLongitude = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -535,7 +571,7 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularInt64Field(value: &self.creationTime) }()
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._creationTime) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.creatorUid) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.shareID) }()
       case 4: try { try decoder.decodeSingularStringField(value: &self.thoughtID) }()
@@ -558,9 +594,9 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if self.creationTime != 0 {
-      try visitor.visitSingularInt64Field(value: self.creationTime, fieldNumber: 1)
-    }
+    try { if let v = self._creationTime {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
     if !self.creatorUid.isEmpty {
       try visitor.visitSingularStringField(value: self.creatorUid, fieldNumber: 2)
     }
@@ -601,7 +637,7 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
   }
 
   static func ==(lhs: Proto_ThreadVideo, rhs: Proto_ThreadVideo) -> Bool {
-    if lhs.creationTime != rhs.creationTime {return false}
+    if lhs._creationTime != rhs._creationTime {return false}
     if lhs.creatorUid != rhs.creatorUid {return false}
     if lhs.shareID != rhs.shareID {return false}
     if lhs.thoughtID != rhs.thoughtID {return false}
@@ -645,14 +681,16 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     26: .same(proto: "language"),
     27: .same(proto: "albumVideoPath"),
     28: .same(proto: "albumVideoThumbnailPath"),
+    29: .same(proto: "placeLatitude"),
+    30: .same(proto: "placeLongitude"),
   ]
 
   fileprivate class _StorageClass {
     var _creators: [String] = []
-    var _lastUpdateTime: Int64 = 0
+    var _lastUpdateTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _origShareID: String = String()
     var _origUid: String = String()
-    var _startTime: Int64 = 0
+    var _startTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _threadID: String = String()
     var _title: String? = nil
     var _descriptions: String? = nil
@@ -671,6 +709,8 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     var _language: String? = nil
     var _albumVideoPath: String? = nil
     var _albumVideoThumbnailPath: String? = nil
+    var _placeLatitude: Double? = nil
+    var _placeLongitude: Double? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -700,6 +740,8 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       _language = source._language
       _albumVideoPath = source._albumVideoPath
       _albumVideoThumbnailPath = source._albumVideoThumbnailPath
+      _placeLatitude = source._placeLatitude
+      _placeLongitude = source._placeLongitude
     }
   }
 
@@ -719,10 +761,10 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         // enabled. https://github.com/apple/swift-protobuf/issues/1034
         switch fieldNumber {
         case 1: try { try decoder.decodeRepeatedStringField(value: &_storage._creators) }()
-        case 2: try { try decoder.decodeSingularInt64Field(value: &_storage._lastUpdateTime) }()
+        case 2: try { try decoder.decodeSingularMessageField(value: &_storage._lastUpdateTime) }()
         case 3: try { try decoder.decodeSingularStringField(value: &_storage._origShareID) }()
         case 4: try { try decoder.decodeSingularStringField(value: &_storage._origUid) }()
-        case 5: try { try decoder.decodeSingularInt64Field(value: &_storage._startTime) }()
+        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._startTime) }()
         case 6: try { try decoder.decodeSingularStringField(value: &_storage._threadID) }()
         case 11: try { try decoder.decodeSingularStringField(value: &_storage._title) }()
         case 12: try { try decoder.decodeSingularInt64Field(value: &_storage._totalLikeCount) }()
@@ -741,6 +783,8 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         case 26: try { try decoder.decodeSingularStringField(value: &_storage._language) }()
         case 27: try { try decoder.decodeSingularStringField(value: &_storage._albumVideoPath) }()
         case 28: try { try decoder.decodeSingularStringField(value: &_storage._albumVideoThumbnailPath) }()
+        case 29: try { try decoder.decodeSingularDoubleField(value: &_storage._placeLatitude) }()
+        case 30: try { try decoder.decodeSingularDoubleField(value: &_storage._placeLongitude) }()
         default: break
         }
       }
@@ -756,18 +800,18 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       if !_storage._creators.isEmpty {
         try visitor.visitRepeatedStringField(value: _storage._creators, fieldNumber: 1)
       }
-      if _storage._lastUpdateTime != 0 {
-        try visitor.visitSingularInt64Field(value: _storage._lastUpdateTime, fieldNumber: 2)
-      }
+      try { if let v = _storage._lastUpdateTime {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      } }()
       if !_storage._origShareID.isEmpty {
         try visitor.visitSingularStringField(value: _storage._origShareID, fieldNumber: 3)
       }
       if !_storage._origUid.isEmpty {
         try visitor.visitSingularStringField(value: _storage._origUid, fieldNumber: 4)
       }
-      if _storage._startTime != 0 {
-        try visitor.visitSingularInt64Field(value: _storage._startTime, fieldNumber: 5)
-      }
+      try { if let v = _storage._startTime {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+      } }()
       if !_storage._threadID.isEmpty {
         try visitor.visitSingularStringField(value: _storage._threadID, fieldNumber: 6)
       }
@@ -822,6 +866,12 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       try { if let v = _storage._albumVideoThumbnailPath {
         try visitor.visitSingularStringField(value: v, fieldNumber: 28)
       } }()
+      try { if let v = _storage._placeLatitude {
+        try visitor.visitSingularDoubleField(value: v, fieldNumber: 29)
+      } }()
+      try { if let v = _storage._placeLongitude {
+        try visitor.visitSingularDoubleField(value: v, fieldNumber: 30)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -854,6 +904,8 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         if _storage._language != rhs_storage._language {return false}
         if _storage._albumVideoPath != rhs_storage._albumVideoPath {return false}
         if _storage._albumVideoThumbnailPath != rhs_storage._albumVideoThumbnailPath {return false}
+        if _storage._placeLatitude != rhs_storage._placeLatitude {return false}
+        if _storage._placeLongitude != rhs_storage._placeLongitude {return false}
         return true
       }
       if !storagesAreEqual {return false}

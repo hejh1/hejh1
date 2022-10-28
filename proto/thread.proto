@@ -3,10 +3,12 @@ syntax = "proto3";
 
 package proto;
 
+import "google/protobuf/timestamp.proto";
+
 option go_package = "github.com/oogwaylab/common/proto";
 
 message ThreadVideo {
-  int64 creationTime = 1;
+  google.protobuf.Timestamp creationTime = 1;
   string creatorUid = 2;
   string shareId = 3;
   string thoughtId = 4;
@@ -26,13 +28,13 @@ message Thread {
   // All creators to this thread.
   repeated string creators = 1;
   // The last time when one new video is added to the thread.
-  int64 lastUpdateTime = 2;
+  google.protobuf.Timestamp lastUpdateTime = 2;
   // The original video id that starts the thread.
   string origShareId = 3;
   // The original author uid that starts the thread.
   string origUid = 4;
   // The start time of the thread.
-  int64 startTime = 5;
+  google.protobuf.Timestamp startTime = 5;
   // The unique id that identifies the thread.
   string threadId = 6;
 
@@ -56,7 +58,7 @@ message Thread {
   optional string placeName = 18;
   // A place id to the thread, based on google map definition
   optional string placeID = 20;
-  // A place coordinate tag to the thread
+  // A place coordinate tag to the thread [retired]
   optional Coordinate2D placeCoordinate = 19;
   // A score representing priority in feed
   optional double feedScore = 22;
@@ -70,6 +72,10 @@ message Thread {
   optional string albumVideoPath = 27;
   // The album video thumbnail
   optional string albumVideoThumbnailPath = 28;
+  // The place latitude
+  optional double placeLatitude = 29;
+  // The place longitude
+  optional double placeLongitude = 30;
 }
 
 message ThreadAndVideoTuple {
