@@ -1,0 +1,22 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+message Friend {
+
+    // The uid of the pending/accepted friend
+    string uid = 1;
+    // Is the target user the initiator of the friend request
+    bool isInitiator = 2;
+    // Is the target user the initiator of the friend request
+    bool isAccepted = 3;
+    // App Identifier
+    repeated string appIds = 4;
+    // The timestamp of last interaction
+    google.protobuf.Timestamp timestamp = 5;
+}
