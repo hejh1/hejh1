@@ -23,35 +23,35 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// common Request proto
-struct Proto_RequestWithoutPage {
+public struct Proto_RequestWithoutPage {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var idtoken: String = String()
+  public var idtoken: String = String()
 
-  var customToken: String = String()
+  public var customToken: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// common Response proto
-struct Proto_ResponseWithoutPage {
+public struct Proto_ResponseWithoutPage {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var errCode: String = String()
+  public var errCode: String = String()
 
-  var errMsg: String = String()
+  public var errMsg: String = String()
 
-  var data: String = String()
+  public var data: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -64,13 +64,13 @@ extension Proto_ResponseWithoutPage: @unchecked Sendable {}
 fileprivate let _protobuf_package = "proto"
 
 extension Proto_RequestWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestWithoutPage"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestWithoutPage"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "IDToken"),
     2: .same(proto: "CustomToken"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -83,7 +83,7 @@ extension Proto_RequestWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.idtoken.isEmpty {
       try visitor.visitSingularStringField(value: self.idtoken, fieldNumber: 1)
     }
@@ -93,7 +93,7 @@ extension Proto_RequestWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_RequestWithoutPage, rhs: Proto_RequestWithoutPage) -> Bool {
+  public static func ==(lhs: Proto_RequestWithoutPage, rhs: Proto_RequestWithoutPage) -> Bool {
     if lhs.idtoken != rhs.idtoken {return false}
     if lhs.customToken != rhs.customToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -102,14 +102,14 @@ extension Proto_RequestWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Proto_ResponseWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseWithoutPage"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseWithoutPage"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "ErrCode"),
     2: .same(proto: "ErrMsg"),
     3: .same(proto: "Data"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -123,7 +123,7 @@ extension Proto_ResponseWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.errCode.isEmpty {
       try visitor.visitSingularStringField(value: self.errCode, fieldNumber: 1)
     }
@@ -136,7 +136,7 @@ extension Proto_ResponseWithoutPage: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_ResponseWithoutPage, rhs: Proto_ResponseWithoutPage) -> Bool {
+  public static func ==(lhs: Proto_ResponseWithoutPage, rhs: Proto_ResponseWithoutPage) -> Bool {
     if lhs.errCode != rhs.errCode {return false}
     if lhs.errMsg != rhs.errMsg {return false}
     if lhs.data != rhs.data {return false}

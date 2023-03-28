@@ -24,22 +24,22 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// Geographic address of a location.
 /// Next Tag: 5
-struct Proto_Geo {
+public struct Proto_Geo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var latitude: Double = 0
+  public var latitude: Double = 0
 
-  var longitude: Double = 0
+  public var longitude: Double = 0
 
-  var altitude: Double = 0
+  public var altitude: Double = 0
 
-  var rediusInMeters: Double = 0
+  public var rediusInMeters: Double = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -51,15 +51,15 @@ extension Proto_Geo: @unchecked Sendable {}
 fileprivate let _protobuf_package = "proto"
 
 extension Proto_Geo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Geo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Geo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "latitude"),
     2: .same(proto: "longitude"),
     3: .same(proto: "altitude"),
     4: .standard(proto: "redius_in_meters"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -74,7 +74,7 @@ extension Proto_Geo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.latitude != 0 {
       try visitor.visitSingularDoubleField(value: self.latitude, fieldNumber: 1)
     }
@@ -90,7 +90,7 @@ extension Proto_Geo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Geo, rhs: Proto_Geo) -> Bool {
+  public static func ==(lhs: Proto_Geo, rhs: Proto_Geo) -> Bool {
     if lhs.latitude != rhs.latitude {return false}
     if lhs.longitude != rhs.longitude {return false}
     if lhs.altitude != rhs.altitude {return false}

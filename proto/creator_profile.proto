@@ -1,0 +1,34 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+message CreatorProfile {
+    optional string creatorUid = 1;
+    optional string name = 2;
+    optional string bio = 3;
+    optional string photoUrl = 4;
+    optional bool isPrivate = 5;
+    optional float karma = 6;
+    optional bool inWaitingList = 7;
+    optional int64 maxInvite = 8;
+    optional int64 usedInvite = 9;
+    optional string username = 10;
+    optional bool isNPC = 11;
+    optional bool isDeleted = 12;
+    repeated string tags = 13;
+    optional float huddleKarma = 14;
+    optional string subscriptionTier = 15;
+    optional string subscriptionExpirationDate = 16;
+    optional int64 subscriptionCredits = 17;
+    optional int64 subscriptionTrainingCredits = 18;
+    optional bool isFeatured = 19;
+    optional string modelPrivacy = 20;
+    optional int64 realmCredits = 21;
+}
+
+message CreatorProfiles {
+    repeated CreatorProfile profiles = 1;
+}

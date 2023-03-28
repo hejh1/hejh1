@@ -76,6 +76,14 @@ message Thread {
   optional double placeLatitude = 29;
   // The place longitude
   optional double placeLongitude = 30;
+  // The share id of hightlight video in feed, if any
+  optional string highlightShareId = 31;
+  // The list of commenter uids
+  repeated string commenters = 32;
+  // The list of uids who liked the thread
+  repeated string likers = 33;
+  // The user inputted tags
+  repeated string tags = 34;
 }
 
 message ThreadAndVideoTuple {
@@ -107,4 +115,13 @@ message RequestFeed {
   optional string requestID = 4;
   optional string language = 5;
   optional string groupName = 6;
+  optional bool isNewUser = 7;
+  optional bool friendOnly = 8;
+  optional bool withMixer = 9;
+  optional bool withWatchState = 10;
+  optional bool promoteFollowedGroups = 11;
+  optional bool selfOnly = 12;
+  optional bool customOnly = 13;
+  optional bool refitOnly = 14;
+  optional bool dailyOnly = 15;
 }

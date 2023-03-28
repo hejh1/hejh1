@@ -22,38 +22,38 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Proto_Thought {
+public struct Proto_Thought {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sessionID: String = String()
+  public var sessionID: String = String()
 
-  var creationTime: Int64 = 0
+  public var creationTime: Int64 = 0
 
-  var serverMergedMediaPath: String = String()
+  public var serverMergedMediaPath: String = String()
 
-  var serverMergedMediaSize: Int64 = 0
+  public var serverMergedMediaSize: Int64 = 0
 
-  var serverExportedMediaPath: String = String()
+  public var serverExportedMediaPath: String = String()
 
-  var serverExportedMediaSize: Int64 = 0
+  public var serverExportedMediaSize: Int64 = 0
 
-  var serverThumbnailImagePath: String = String()
+  public var serverThumbnailImagePath: String = String()
 
-  var serverThumbnailSize: Int64 = 0
+  public var serverThumbnailSize: Int64 = 0
 
-  var serverHdmediaPath: String = String()
+  public var serverHdmediaPath: String = String()
 
-  var serverHdmediaSize: Int64 = 0
+  public var serverHdmediaSize: Int64 = 0
 
-  var serverSdmediaPath: String = String()
+  public var serverSdmediaPath: String = String()
 
-  var serverSdmediaSize: Int64 = 0
+  public var serverSdmediaSize: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -65,8 +65,8 @@ extension Proto_Thought: @unchecked Sendable {}
 fileprivate let _protobuf_package = "proto"
 
 extension Proto_Thought: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Thought"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Thought"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sessionId"),
     2: .same(proto: "creationTime"),
     11: .same(proto: "serverMergedMediaPath"),
@@ -81,7 +81,7 @@ extension Proto_Thought: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     20: .same(proto: "serverSDMediaSize"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -104,7 +104,7 @@ extension Proto_Thought: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.sessionID.isEmpty {
       try visitor.visitSingularStringField(value: self.sessionID, fieldNumber: 1)
     }
@@ -144,7 +144,7 @@ extension Proto_Thought: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Thought, rhs: Proto_Thought) -> Bool {
+  public static func ==(lhs: Proto_Thought, rhs: Proto_Thought) -> Bool {
     if lhs.sessionID != rhs.sessionID {return false}
     if lhs.creationTime != rhs.creationTime {return false}
     if lhs.serverMergedMediaPath != rhs.serverMergedMediaPath {return false}

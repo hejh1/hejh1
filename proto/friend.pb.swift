@@ -22,36 +22,36 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Proto_Friend {
+public struct Proto_Friend {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// The uid of the pending/accepted friend
-  var uid: String = String()
+  public var uid: String = String()
 
   /// Is the target user the initiator of the friend request
-  var isInitiator: Bool = false
+  public var isInitiator: Bool = false
 
   /// Is the target user the initiator of the friend request
-  var isAccepted: Bool = false
+  public var isAccepted: Bool = false
 
   /// App Identifier
-  var appIds: [String] = []
+  public var appIds: [String] = []
 
   /// The timestamp of last interaction
-  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_timestamp = newValue}
   }
   /// Returns true if `timestamp` has been explicitly set.
-  var hasTimestamp: Bool {return self._timestamp != nil}
+  public var hasTimestamp: Bool {return self._timestamp != nil}
   /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-  mutating func clearTimestamp() {self._timestamp = nil}
+  public mutating func clearTimestamp() {self._timestamp = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
@@ -65,8 +65,8 @@ extension Proto_Friend: @unchecked Sendable {}
 fileprivate let _protobuf_package = "proto"
 
 extension Proto_Friend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Friend"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Friend"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "uid"),
     2: .same(proto: "isInitiator"),
     3: .same(proto: "isAccepted"),
@@ -74,7 +74,7 @@ extension Proto_Friend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     5: .same(proto: "timestamp"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -90,7 +90,7 @@ extension Proto_Friend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -113,7 +113,7 @@ extension Proto_Friend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Friend, rhs: Proto_Friend) -> Bool {
+  public static func ==(lhs: Proto_Friend, rhs: Proto_Friend) -> Bool {
     if lhs.uid != rhs.uid {return false}
     if lhs.isInitiator != rhs.isInitiator {return false}
     if lhs.isAccepted != rhs.isAccepted {return false}

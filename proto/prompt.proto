@@ -1,0 +1,142 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/timestamp.proto";
+import "creator_profile.proto";
+import "thread.proto";
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+enum ModelType {
+    GENERAL = 0;
+    PERSONAL = 1;
+    DELIBERATE = 2;
+    PROTOGEN = 3;
+    OPENJOURNEY = 4;
+    PORTRAITPLUS = 5;
+    DREAMSHAPER = 6;
+    EIMISANIME = 7;
+}
+
+enum GenerationSteps {
+    STEPS_NORMAL = 0;
+    STEPS_EXTENDED = 1;
+}
+
+enum GenerationQuality {
+    QUALITY_LOW = 0;
+    QUALITY_MEDIUM = 1;
+    QUALITY_HIGH = 2;
+}
+
+// 1:1, 4:5, 9:16, 4:3, 5:3
+enum AspectRatio {
+    RATIO_1_1 = 0;
+    RATIO_4_5 = 1;
+    RATIO_9_16 = 2;
+    RATIO_4_3 = 3;
+    RATIO_5_3 = 4;
+}
+
+enum GuidanceScale {
+    SCALE_LOW = 0;
+    SCALE_MEDIUM = 1;
+    SCALE_HIGH = 2;
+}
+
+enum ControlType {
+    NONE = 0;
+    POSE = 1;
+}
+
+enum RealmPostType {
+    DAILY = 0;
+    CUSTOM = 1;
+    REFIT = 2;
+    FEATURED = 3;
+}
+
+message PromptRequest {
+    optional string uid = 1;
+    optional string appID = 2;
+    optional string requestID = 3;
+    optional string promptPositive = 4;
+    optional string promptNegative = 5;
+    optional bool allowNsfw = 6;
+    optional google.protobuf.Timestamp timestamp = 7;
+    optional string type = 8;
+    optional string notificationID = 9;
+    optional ModelType modelType = 10;
+    optional GenerationSteps generationSteps = 11;
+    optional GenerationQuality generationQuality = 12;
+    optional AspectRatio aspectRatio = 13;
+    optional GuidanceScale guidanceScale = 14;
+    optional string startImage = 15;
+    optional int64 controlStrength = 16;
+    optional int64 hitsToSkip = 17;
+    optional string maskImage = 18;
+    optional string backendReleaseVersion = 19;
+    optional string appVersion = 20;
+    optional ControlType controlType = 21;
+    optional string controlSource = 22;
+}
+
+message Prompt {
+    optional string name = 1;
+    optional string description = 2;
+    optional int64 date = 3;
+    optional int64 seed = 4;
+    optional string promptPositive = 5;
+    optional string promptNegative = 6;
+    repeated string sampleImagePath = 7;
+    optional bool isExample = 8;
+    optional ModelType modelType = 10;
+    optional GenerationSteps generationSteps = 11;
+    optional GenerationQuality generationQuality = 12;
+    optional AspectRatio aspectRatio = 13;
+    optional GuidanceScale guidanceScale = 14;
+    optional string startImage = 15;
+    optional int64 controlStrength = 16;
+    optional int64 generationCount = 17;
+    repeated string tags = 18;
+    optional string maskImage = 19;
+    optional float modifierStrength = 20;
+    optional ControlType controlType = 21;
+    optional string controlSource = 22;
+    optional bool hidden = 23;
+    optional double timestamp = 24;
+    optional string uid = 25;
+    optional RealmPostType postType = 26;
+    optional string threadID = 27;
+    optional string promptID = 28;
+    optional string enforcedPromptNegative = 29;
+}
+
+message Prompts {
+    repeated Prompt prompts = 1;
+}
+
+message Features {
+    repeated float features = 1;
+}
+
+service PromptSearch {
+    // Echo back the prompt request
+    rpc Echo (PromptRequest) returns (PromptRequest) {}
+    // Search images from prompt by vector similarity.
+    rpc SearchImagesFromPrompt (PromptRequest) returns (Prompts) {}
+    // Search styles from prompt by text similarity.
+    rpc SearchStylesFromPrompt (PromptRequest) returns (Prompts) {}
+    // Search usernames and names
+    rpc SearchUsersFromText (PromptRequest) returns (CreatorProfiles) {}
+    // Search prompts history
+    rpc SearchPromptHistory (PromptRequest) returns (Prompts) {}
+    // Hide prompt from user's history
+    rpc HidePromptFromUser (PromptRequest) returns (Prompt) {}
+    // Get feature array for post
+    rpc GetFeaturesForPost (PromptRequest) returns (Features) {}
+    // Get posts from prompt search
+    rpc SearchPostsFromPrompt (PromptRequest) returns (ResponseFeed) {}
+}

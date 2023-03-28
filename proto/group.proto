@@ -1,0 +1,40 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+message Groups {
+  repeated Group groups = 1;
+}
+
+message Group {
+  // The unique name that identifies the group.
+  string name = 1;
+  // The unique id that identifies the thought.
+  optional string description = 2;
+  // The original author uid that starts the group.
+  optional string creatorUid = 3;
+  // Tags of the group, editable by author only
+  repeated string tags = 4;
+  // Number of followers
+  optional int64 numFollowers = 5;
+  // Number of likes
+  optional int64 numLikes = 6;
+  // Number of threads
+  optional int64 numThreads = 7;
+
+  // Karma score of the place
+  optional double placeLatitude = 8;
+  // Karma score of the place
+  optional double placeLongitude = 9;
+  // A place name tag to the place
+  optional string googlePlaceID = 10;
+
+  // The display name, which has less restrictions than the group name
+  optional string displayName = 11;
+
+  // Private Group
+  optional bool isPrivate = 12;
+}

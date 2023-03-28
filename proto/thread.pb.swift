@@ -22,110 +22,110 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Proto_ThreadVideo {
+public struct Proto_ThreadVideo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var creationTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var creationTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _creationTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_creationTime = newValue}
   }
   /// Returns true if `creationTime` has been explicitly set.
-  var hasCreationTime: Bool {return self._creationTime != nil}
+  public var hasCreationTime: Bool {return self._creationTime != nil}
   /// Clears the value of `creationTime`. Subsequent reads from it will return its default value.
-  mutating func clearCreationTime() {self._creationTime = nil}
+  public mutating func clearCreationTime() {self._creationTime = nil}
 
-  var creatorUid: String = String()
+  public var creatorUid: String = String()
 
-  var shareID: String = String()
+  public var shareID: String = String()
 
-  var thoughtID: String = String()
+  public var thoughtID: String = String()
 
-  var likeCount: Int64 {
+  public var likeCount: Int64 {
     get {return _likeCount ?? 0}
     set {_likeCount = newValue}
   }
   /// Returns true if `likeCount` has been explicitly set.
-  var hasLikeCount: Bool {return self._likeCount != nil}
+  public var hasLikeCount: Bool {return self._likeCount != nil}
   /// Clears the value of `likeCount`. Subsequent reads from it will return its default value.
-  mutating func clearLikeCount() {self._likeCount = nil}
+  public mutating func clearLikeCount() {self._likeCount = nil}
 
-  var remixCount: Int64 {
+  public var remixCount: Int64 {
     get {return _remixCount ?? 0}
     set {_remixCount = newValue}
   }
   /// Returns true if `remixCount` has been explicitly set.
-  var hasRemixCount: Bool {return self._remixCount != nil}
+  public var hasRemixCount: Bool {return self._remixCount != nil}
   /// Clears the value of `remixCount`. Subsequent reads from it will return its default value.
-  mutating func clearRemixCount() {self._remixCount = nil}
+  public mutating func clearRemixCount() {self._remixCount = nil}
 
-  var shareCount: Int64 {
+  public var shareCount: Int64 {
     get {return _shareCount ?? 0}
     set {_shareCount = newValue}
   }
   /// Returns true if `shareCount` has been explicitly set.
-  var hasShareCount: Bool {return self._shareCount != nil}
+  public var hasShareCount: Bool {return self._shareCount != nil}
   /// Clears the value of `shareCount`. Subsequent reads from it will return its default value.
-  mutating func clearShareCount() {self._shareCount = nil}
+  public mutating func clearShareCount() {self._shareCount = nil}
 
-  var parentShareID: String {
+  public var parentShareID: String {
     get {return _parentShareID ?? String()}
     set {_parentShareID = newValue}
   }
   /// Returns true if `parentShareID` has been explicitly set.
-  var hasParentShareID: Bool {return self._parentShareID != nil}
+  public var hasParentShareID: Bool {return self._parentShareID != nil}
   /// Clears the value of `parentShareID`. Subsequent reads from it will return its default value.
-  mutating func clearParentShareID() {self._parentShareID = nil}
+  public mutating func clearParentShareID() {self._parentShareID = nil}
 
-  var threadID: String {
+  public var threadID: String {
     get {return _threadID ?? String()}
     set {_threadID = newValue}
   }
   /// Returns true if `threadID` has been explicitly set.
-  var hasThreadID: Bool {return self._threadID != nil}
+  public var hasThreadID: Bool {return self._threadID != nil}
   /// Clears the value of `threadID`. Subsequent reads from it will return its default value.
-  mutating func clearThreadID() {self._threadID = nil}
+  public mutating func clearThreadID() {self._threadID = nil}
 
-  var mediaReady: Bool {
+  public var mediaReady: Bool {
     get {return _mediaReady ?? false}
     set {_mediaReady = newValue}
   }
   /// Returns true if `mediaReady` has been explicitly set.
-  var hasMediaReady: Bool {return self._mediaReady != nil}
+  public var hasMediaReady: Bool {return self._mediaReady != nil}
   /// Clears the value of `mediaReady`. Subsequent reads from it will return its default value.
-  mutating func clearMediaReady() {self._mediaReady = nil}
+  public mutating func clearMediaReady() {self._mediaReady = nil}
 
-  var hdready: Bool {
+  public var hdready: Bool {
     get {return _hdready ?? false}
     set {_hdready = newValue}
   }
   /// Returns true if `hdready` has been explicitly set.
-  var hasHdready: Bool {return self._hdready != nil}
+  public var hasHdready: Bool {return self._hdready != nil}
   /// Clears the value of `hdready`. Subsequent reads from it will return its default value.
-  mutating func clearHdready() {self._hdready = nil}
+  public mutating func clearHdready() {self._hdready = nil}
 
-  var sdready: Bool {
+  public var sdready: Bool {
     get {return _sdready ?? false}
     set {_sdready = newValue}
   }
   /// Returns true if `sdready` has been explicitly set.
-  var hasSdready: Bool {return self._sdready != nil}
+  public var hasSdready: Bool {return self._sdready != nil}
   /// Clears the value of `sdready`. Subsequent reads from it will return its default value.
-  mutating func clearSdready() {self._sdready = nil}
+  public mutating func clearSdready() {self._sdready = nil}
 
-  var appID: String {
+  public var appID: String {
     get {return _appID ?? String()}
     set {_appID = newValue}
   }
   /// Returns true if `appID` has been explicitly set.
-  var hasAppID: Bool {return self._appID != nil}
+  public var hasAppID: Bool {return self._appID != nil}
   /// Clears the value of `appID`. Subsequent reads from it will return its default value.
-  mutating func clearAppID() {self._appID = nil}
+  public mutating func clearAppID() {self._appID = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _creationTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _likeCount: Int64? = nil
@@ -139,391 +139,500 @@ struct Proto_ThreadVideo {
   fileprivate var _appID: String? = nil
 }
 
-struct Proto_Thread {
+public struct Proto_Thread {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// All creators to this thread.
-  var creators: [String] {
+  public var creators: [String] {
     get {return _storage._creators}
     set {_uniqueStorage()._creators = newValue}
   }
 
   /// The last time when one new video is added to the thread.
-  var lastUpdateTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var lastUpdateTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._lastUpdateTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._lastUpdateTime = newValue}
   }
   /// Returns true if `lastUpdateTime` has been explicitly set.
-  var hasLastUpdateTime: Bool {return _storage._lastUpdateTime != nil}
+  public var hasLastUpdateTime: Bool {return _storage._lastUpdateTime != nil}
   /// Clears the value of `lastUpdateTime`. Subsequent reads from it will return its default value.
-  mutating func clearLastUpdateTime() {_uniqueStorage()._lastUpdateTime = nil}
+  public mutating func clearLastUpdateTime() {_uniqueStorage()._lastUpdateTime = nil}
 
   /// The original video id that starts the thread.
-  var origShareID: String {
+  public var origShareID: String {
     get {return _storage._origShareID}
     set {_uniqueStorage()._origShareID = newValue}
   }
 
   /// The original author uid that starts the thread.
-  var origUid: String {
+  public var origUid: String {
     get {return _storage._origUid}
     set {_uniqueStorage()._origUid = newValue}
   }
 
   /// The start time of the thread.
-  var startTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var startTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._startTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._startTime = newValue}
   }
   /// Returns true if `startTime` has been explicitly set.
-  var hasStartTime: Bool {return _storage._startTime != nil}
+  public var hasStartTime: Bool {return _storage._startTime != nil}
   /// Clears the value of `startTime`. Subsequent reads from it will return its default value.
-  mutating func clearStartTime() {_uniqueStorage()._startTime = nil}
+  public mutating func clearStartTime() {_uniqueStorage()._startTime = nil}
 
   /// The unique id that identifies the thread.
-  var threadID: String {
+  public var threadID: String {
     get {return _storage._threadID}
     set {_uniqueStorage()._threadID = newValue}
   }
 
   /// Title of the thread, editable by author only
-  var title: String {
+  public var title: String {
     get {return _storage._title ?? String()}
     set {_uniqueStorage()._title = newValue}
   }
   /// Returns true if `title` has been explicitly set.
-  var hasTitle: Bool {return _storage._title != nil}
+  public var hasTitle: Bool {return _storage._title != nil}
   /// Clears the value of `title`. Subsequent reads from it will return its default value.
-  mutating func clearTitle() {_uniqueStorage()._title = nil}
+  public mutating func clearTitle() {_uniqueStorage()._title = nil}
 
   /// Descriptions of the thread, editable by author only
-  var descriptions: String {
+  public var descriptions: String {
     get {return _storage._descriptions ?? String()}
     set {_uniqueStorage()._descriptions = newValue}
   }
   /// Returns true if `descriptions` has been explicitly set.
-  var hasDescriptions: Bool {return _storage._descriptions != nil}
+  public var hasDescriptions: Bool {return _storage._descriptions != nil}
   /// Clears the value of `descriptions`. Subsequent reads from it will return its default value.
-  mutating func clearDescriptions() {_uniqueStorage()._descriptions = nil}
+  public mutating func clearDescriptions() {_uniqueStorage()._descriptions = nil}
 
   /// Descriptions of the thread, editable by author only
-  var hashtags: String {
+  public var hashtags: String {
     get {return _storage._hashtags ?? String()}
     set {_uniqueStorage()._hashtags = newValue}
   }
   /// Returns true if `hashtags` has been explicitly set.
-  var hasHashtags: Bool {return _storage._hashtags != nil}
+  public var hasHashtags: Bool {return _storage._hashtags != nil}
   /// Clears the value of `hashtags`. Subsequent reads from it will return its default value.
-  mutating func clearHashtags() {_uniqueStorage()._hashtags = nil}
+  public mutating func clearHashtags() {_uniqueStorage()._hashtags = nil}
 
   /// Descriptions of the thread, editable by author only
-  var color: String {
+  public var color: String {
     get {return _storage._color ?? String()}
     set {_uniqueStorage()._color = newValue}
   }
   /// Returns true if `color` has been explicitly set.
-  var hasColor: Bool {return _storage._color != nil}
+  public var hasColor: Bool {return _storage._color != nil}
   /// Clears the value of `color`. Subsequent reads from it will return its default value.
-  mutating func clearColor() {_uniqueStorage()._color = nil}
+  public mutating func clearColor() {_uniqueStorage()._color = nil}
 
   /// Total likes count from all thread videos
-  var totalLikeCount: Int64 {
+  public var totalLikeCount: Int64 {
     get {return _storage._totalLikeCount ?? 0}
     set {_uniqueStorage()._totalLikeCount = newValue}
   }
   /// Returns true if `totalLikeCount` has been explicitly set.
-  var hasTotalLikeCount: Bool {return _storage._totalLikeCount != nil}
+  public var hasTotalLikeCount: Bool {return _storage._totalLikeCount != nil}
   /// Clears the value of `totalLikeCount`. Subsequent reads from it will return its default value.
-  mutating func clearTotalLikeCount() {_uniqueStorage()._totalLikeCount = nil}
+  public mutating func clearTotalLikeCount() {_uniqueStorage()._totalLikeCount = nil}
 
   /// Total shares count from all thread videos
-  var totalShareCount: Int64 {
+  public var totalShareCount: Int64 {
     get {return _storage._totalShareCount ?? 0}
     set {_uniqueStorage()._totalShareCount = newValue}
   }
   /// Returns true if `totalShareCount` has been explicitly set.
-  var hasTotalShareCount: Bool {return _storage._totalShareCount != nil}
+  public var hasTotalShareCount: Bool {return _storage._totalShareCount != nil}
   /// Clears the value of `totalShareCount`. Subsequent reads from it will return its default value.
-  mutating func clearTotalShareCount() {_uniqueStorage()._totalShareCount = nil}
+  public mutating func clearTotalShareCount() {_uniqueStorage()._totalShareCount = nil}
 
   /// Total remix count from all thread videos
-  var totalRemixCount: Int64 {
+  public var totalRemixCount: Int64 {
     get {return _storage._totalRemixCount ?? 0}
     set {_uniqueStorage()._totalRemixCount = newValue}
   }
   /// Returns true if `totalRemixCount` has been explicitly set.
-  var hasTotalRemixCount: Bool {return _storage._totalRemixCount != nil}
+  public var hasTotalRemixCount: Bool {return _storage._totalRemixCount != nil}
   /// Clears the value of `totalRemixCount`. Subsequent reads from it will return its default value.
-  mutating func clearTotalRemixCount() {_uniqueStorage()._totalRemixCount = nil}
+  public mutating func clearTotalRemixCount() {_uniqueStorage()._totalRemixCount = nil}
 
   /// Thread state. Currently supported state: deleting
-  var state: String {
+  public var state: String {
     get {return _storage._state ?? String()}
     set {_uniqueStorage()._state = newValue}
   }
   /// Returns true if `state` has been explicitly set.
-  var hasState: Bool {return _storage._state != nil}
+  public var hasState: Bool {return _storage._state != nil}
   /// Clears the value of `state`. Subsequent reads from it will return its default value.
-  mutating func clearState() {_uniqueStorage()._state = nil}
+  public mutating func clearState() {_uniqueStorage()._state = nil}
 
   /// A place name tag to the thread
-  var placeName: String {
+  public var placeName: String {
     get {return _storage._placeName ?? String()}
     set {_uniqueStorage()._placeName = newValue}
   }
   /// Returns true if `placeName` has been explicitly set.
-  var hasPlaceName: Bool {return _storage._placeName != nil}
+  public var hasPlaceName: Bool {return _storage._placeName != nil}
   /// Clears the value of `placeName`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceName() {_uniqueStorage()._placeName = nil}
+  public mutating func clearPlaceName() {_uniqueStorage()._placeName = nil}
 
   /// A place id to the thread, based on google map definition
-  var placeID: String {
+  public var placeID: String {
     get {return _storage._placeID ?? String()}
     set {_uniqueStorage()._placeID = newValue}
   }
   /// Returns true if `placeID` has been explicitly set.
-  var hasPlaceID: Bool {return _storage._placeID != nil}
+  public var hasPlaceID: Bool {return _storage._placeID != nil}
   /// Clears the value of `placeID`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceID() {_uniqueStorage()._placeID = nil}
+  public mutating func clearPlaceID() {_uniqueStorage()._placeID = nil}
 
   /// A place coordinate tag to the thread [retired]
-  var placeCoordinate: Proto_Coordinate2D {
+  public var placeCoordinate: Proto_Coordinate2D {
     get {return _storage._placeCoordinate ?? Proto_Coordinate2D()}
     set {_uniqueStorage()._placeCoordinate = newValue}
   }
   /// Returns true if `placeCoordinate` has been explicitly set.
-  var hasPlaceCoordinate: Bool {return _storage._placeCoordinate != nil}
+  public var hasPlaceCoordinate: Bool {return _storage._placeCoordinate != nil}
   /// Clears the value of `placeCoordinate`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceCoordinate() {_uniqueStorage()._placeCoordinate = nil}
+  public mutating func clearPlaceCoordinate() {_uniqueStorage()._placeCoordinate = nil}
 
   /// A score representing priority in feed
-  var feedScore: Double {
+  public var feedScore: Double {
     get {return _storage._feedScore ?? 0}
     set {_uniqueStorage()._feedScore = newValue}
   }
   /// Returns true if `feedScore` has been explicitly set.
-  var hasFeedScore: Bool {return _storage._feedScore != nil}
+  public var hasFeedScore: Bool {return _storage._feedScore != nil}
   /// Clears the value of `feedScore`. Subsequent reads from it will return its default value.
-  mutating func clearFeedScore() {_uniqueStorage()._feedScore = nil}
+  public mutating func clearFeedScore() {_uniqueStorage()._feedScore = nil}
 
   /// App bundle identifier
-  var appID: String {
+  public var appID: String {
     get {return _storage._appID ?? String()}
     set {_uniqueStorage()._appID = newValue}
   }
   /// Returns true if `appID` has been explicitly set.
-  var hasAppID: Bool {return _storage._appID != nil}
+  public var hasAppID: Bool {return _storage._appID != nil}
   /// Clears the value of `appID`. Subsequent reads from it will return its default value.
-  mutating func clearAppID() {_uniqueStorage()._appID = nil}
+  public mutating func clearAppID() {_uniqueStorage()._appID = nil}
 
   /// A group (community) name
-  var groupName: String {
+  public var groupName: String {
     get {return _storage._groupName ?? String()}
     set {_uniqueStorage()._groupName = newValue}
   }
   /// Returns true if `groupName` has been explicitly set.
-  var hasGroupName: Bool {return _storage._groupName != nil}
+  public var hasGroupName: Bool {return _storage._groupName != nil}
   /// Clears the value of `groupName`. Subsequent reads from it will return its default value.
-  mutating func clearGroupName() {_uniqueStorage()._groupName = nil}
+  public mutating func clearGroupName() {_uniqueStorage()._groupName = nil}
 
   /// The language preference of the thread
-  var language: String {
+  public var language: String {
     get {return _storage._language ?? String()}
     set {_uniqueStorage()._language = newValue}
   }
   /// Returns true if `language` has been explicitly set.
-  var hasLanguage: Bool {return _storage._language != nil}
+  public var hasLanguage: Bool {return _storage._language != nil}
   /// Clears the value of `language`. Subsequent reads from it will return its default value.
-  mutating func clearLanguage() {_uniqueStorage()._language = nil}
+  public mutating func clearLanguage() {_uniqueStorage()._language = nil}
 
   /// The album video which showcase the highlights of the thread
-  var albumVideoPath: String {
+  public var albumVideoPath: String {
     get {return _storage._albumVideoPath ?? String()}
     set {_uniqueStorage()._albumVideoPath = newValue}
   }
   /// Returns true if `albumVideoPath` has been explicitly set.
-  var hasAlbumVideoPath: Bool {return _storage._albumVideoPath != nil}
+  public var hasAlbumVideoPath: Bool {return _storage._albumVideoPath != nil}
   /// Clears the value of `albumVideoPath`. Subsequent reads from it will return its default value.
-  mutating func clearAlbumVideoPath() {_uniqueStorage()._albumVideoPath = nil}
+  public mutating func clearAlbumVideoPath() {_uniqueStorage()._albumVideoPath = nil}
 
   /// The album video thumbnail
-  var albumVideoThumbnailPath: String {
+  public var albumVideoThumbnailPath: String {
     get {return _storage._albumVideoThumbnailPath ?? String()}
     set {_uniqueStorage()._albumVideoThumbnailPath = newValue}
   }
   /// Returns true if `albumVideoThumbnailPath` has been explicitly set.
-  var hasAlbumVideoThumbnailPath: Bool {return _storage._albumVideoThumbnailPath != nil}
+  public var hasAlbumVideoThumbnailPath: Bool {return _storage._albumVideoThumbnailPath != nil}
   /// Clears the value of `albumVideoThumbnailPath`. Subsequent reads from it will return its default value.
-  mutating func clearAlbumVideoThumbnailPath() {_uniqueStorage()._albumVideoThumbnailPath = nil}
+  public mutating func clearAlbumVideoThumbnailPath() {_uniqueStorage()._albumVideoThumbnailPath = nil}
 
   /// The place latitude
-  var placeLatitude: Double {
+  public var placeLatitude: Double {
     get {return _storage._placeLatitude ?? 0}
     set {_uniqueStorage()._placeLatitude = newValue}
   }
   /// Returns true if `placeLatitude` has been explicitly set.
-  var hasPlaceLatitude: Bool {return _storage._placeLatitude != nil}
+  public var hasPlaceLatitude: Bool {return _storage._placeLatitude != nil}
   /// Clears the value of `placeLatitude`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceLatitude() {_uniqueStorage()._placeLatitude = nil}
+  public mutating func clearPlaceLatitude() {_uniqueStorage()._placeLatitude = nil}
 
   /// The place longitude
-  var placeLongitude: Double {
+  public var placeLongitude: Double {
     get {return _storage._placeLongitude ?? 0}
     set {_uniqueStorage()._placeLongitude = newValue}
   }
   /// Returns true if `placeLongitude` has been explicitly set.
-  var hasPlaceLongitude: Bool {return _storage._placeLongitude != nil}
+  public var hasPlaceLongitude: Bool {return _storage._placeLongitude != nil}
   /// Clears the value of `placeLongitude`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceLongitude() {_uniqueStorage()._placeLongitude = nil}
+  public mutating func clearPlaceLongitude() {_uniqueStorage()._placeLongitude = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  /// The share id of hightlight video in feed, if any
+  public var highlightShareID: String {
+    get {return _storage._highlightShareID ?? String()}
+    set {_uniqueStorage()._highlightShareID = newValue}
+  }
+  /// Returns true if `highlightShareID` has been explicitly set.
+  public var hasHighlightShareID: Bool {return _storage._highlightShareID != nil}
+  /// Clears the value of `highlightShareID`. Subsequent reads from it will return its default value.
+  public mutating func clearHighlightShareID() {_uniqueStorage()._highlightShareID = nil}
 
-  init() {}
+  /// The list of commenter uids
+  public var commenters: [String] {
+    get {return _storage._commenters}
+    set {_uniqueStorage()._commenters = newValue}
+  }
+
+  /// The list of uids who liked the thread
+  public var likers: [String] {
+    get {return _storage._likers}
+    set {_uniqueStorage()._likers = newValue}
+  }
+
+  /// The user inputted tags
+  public var tags: [String] {
+    get {return _storage._tags}
+    set {_uniqueStorage()._tags = newValue}
+  }
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Proto_ThreadAndVideoTuple {
+public struct Proto_ThreadAndVideoTuple {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var thread: Proto_Thread {
+  public var thread: Proto_Thread {
     get {return _thread ?? Proto_Thread()}
     set {_thread = newValue}
   }
   /// Returns true if `thread` has been explicitly set.
-  var hasThread: Bool {return self._thread != nil}
+  public var hasThread: Bool {return self._thread != nil}
   /// Clears the value of `thread`. Subsequent reads from it will return its default value.
-  mutating func clearThread() {self._thread = nil}
+  public mutating func clearThread() {self._thread = nil}
 
-  var threadVideo: Proto_ThreadVideo {
+  public var threadVideo: Proto_ThreadVideo {
     get {return _threadVideo ?? Proto_ThreadVideo()}
     set {_threadVideo = newValue}
   }
   /// Returns true if `threadVideo` has been explicitly set.
-  var hasThreadVideo: Bool {return self._threadVideo != nil}
+  public var hasThreadVideo: Bool {return self._threadVideo != nil}
   /// Clears the value of `threadVideo`. Subsequent reads from it will return its default value.
-  mutating func clearThreadVideo() {self._threadVideo = nil}
+  public mutating func clearThreadVideo() {self._threadVideo = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _thread: Proto_Thread? = nil
   fileprivate var _threadVideo: Proto_ThreadVideo? = nil
 }
 
-struct Proto_ResponseFeed {
+public struct Proto_ResponseFeed {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var errCode: String = String()
+  public var errCode: String = String()
 
-  var errMsg: String = String()
+  public var errMsg: String = String()
 
-  var data: [Proto_ThreadAndVideoTuple] = []
+  public var data: [Proto_ThreadAndVideoTuple] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Proto_ResponseNewestThreads {
+public struct Proto_ResponseNewestThreads {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var errCode: String = String()
+  public var errCode: String = String()
 
-  var errMsg: String = String()
+  public var errMsg: String = String()
 
-  var datas: [Proto_ThreadVideo] = []
+  public var datas: [Proto_ThreadVideo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Proto_Coordinate2D {
+public struct Proto_Coordinate2D {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var latitude: Double = 0
+  public var latitude: Double = 0
 
-  var longitude: Double = 0
+  public var longitude: Double = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Proto_RequestFeed {
+public struct Proto_RequestFeed {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var uid: String {
+  public var uid: String {
     get {return _uid ?? String()}
     set {_uid = newValue}
   }
   /// Returns true if `uid` has been explicitly set.
-  var hasUid: Bool {return self._uid != nil}
+  public var hasUid: Bool {return self._uid != nil}
   /// Clears the value of `uid`. Subsequent reads from it will return its default value.
-  mutating func clearUid() {self._uid = nil}
+  public mutating func clearUid() {self._uid = nil}
 
-  var coordinate: Proto_Coordinate2D {
+  public var coordinate: Proto_Coordinate2D {
     get {return _coordinate ?? Proto_Coordinate2D()}
     set {_coordinate = newValue}
   }
   /// Returns true if `coordinate` has been explicitly set.
-  var hasCoordinate: Bool {return self._coordinate != nil}
+  public var hasCoordinate: Bool {return self._coordinate != nil}
   /// Clears the value of `coordinate`. Subsequent reads from it will return its default value.
-  mutating func clearCoordinate() {self._coordinate = nil}
+  public mutating func clearCoordinate() {self._coordinate = nil}
 
-  var appID: String {
+  public var appID: String {
     get {return _appID ?? String()}
     set {_appID = newValue}
   }
   /// Returns true if `appID` has been explicitly set.
-  var hasAppID: Bool {return self._appID != nil}
+  public var hasAppID: Bool {return self._appID != nil}
   /// Clears the value of `appID`. Subsequent reads from it will return its default value.
-  mutating func clearAppID() {self._appID = nil}
+  public mutating func clearAppID() {self._appID = nil}
 
-  var requestID: String {
+  public var requestID: String {
     get {return _requestID ?? String()}
     set {_requestID = newValue}
   }
   /// Returns true if `requestID` has been explicitly set.
-  var hasRequestID: Bool {return self._requestID != nil}
+  public var hasRequestID: Bool {return self._requestID != nil}
   /// Clears the value of `requestID`. Subsequent reads from it will return its default value.
-  mutating func clearRequestID() {self._requestID = nil}
+  public mutating func clearRequestID() {self._requestID = nil}
 
-  var language: String {
+  public var language: String {
     get {return _language ?? String()}
     set {_language = newValue}
   }
   /// Returns true if `language` has been explicitly set.
-  var hasLanguage: Bool {return self._language != nil}
+  public var hasLanguage: Bool {return self._language != nil}
   /// Clears the value of `language`. Subsequent reads from it will return its default value.
-  mutating func clearLanguage() {self._language = nil}
+  public mutating func clearLanguage() {self._language = nil}
 
-  var groupName: String {
+  public var groupName: String {
     get {return _groupName ?? String()}
     set {_groupName = newValue}
   }
   /// Returns true if `groupName` has been explicitly set.
-  var hasGroupName: Bool {return self._groupName != nil}
+  public var hasGroupName: Bool {return self._groupName != nil}
   /// Clears the value of `groupName`. Subsequent reads from it will return its default value.
-  mutating func clearGroupName() {self._groupName = nil}
+  public mutating func clearGroupName() {self._groupName = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var isNewUser: Bool {
+    get {return _isNewUser ?? false}
+    set {_isNewUser = newValue}
+  }
+  /// Returns true if `isNewUser` has been explicitly set.
+  public var hasIsNewUser: Bool {return self._isNewUser != nil}
+  /// Clears the value of `isNewUser`. Subsequent reads from it will return its default value.
+  public mutating func clearIsNewUser() {self._isNewUser = nil}
 
-  init() {}
+  public var friendOnly: Bool {
+    get {return _friendOnly ?? false}
+    set {_friendOnly = newValue}
+  }
+  /// Returns true if `friendOnly` has been explicitly set.
+  public var hasFriendOnly: Bool {return self._friendOnly != nil}
+  /// Clears the value of `friendOnly`. Subsequent reads from it will return its default value.
+  public mutating func clearFriendOnly() {self._friendOnly = nil}
+
+  public var withMixer: Bool {
+    get {return _withMixer ?? false}
+    set {_withMixer = newValue}
+  }
+  /// Returns true if `withMixer` has been explicitly set.
+  public var hasWithMixer: Bool {return self._withMixer != nil}
+  /// Clears the value of `withMixer`. Subsequent reads from it will return its default value.
+  public mutating func clearWithMixer() {self._withMixer = nil}
+
+  public var withWatchState: Bool {
+    get {return _withWatchState ?? false}
+    set {_withWatchState = newValue}
+  }
+  /// Returns true if `withWatchState` has been explicitly set.
+  public var hasWithWatchState: Bool {return self._withWatchState != nil}
+  /// Clears the value of `withWatchState`. Subsequent reads from it will return its default value.
+  public mutating func clearWithWatchState() {self._withWatchState = nil}
+
+  public var promoteFollowedGroups: Bool {
+    get {return _promoteFollowedGroups ?? false}
+    set {_promoteFollowedGroups = newValue}
+  }
+  /// Returns true if `promoteFollowedGroups` has been explicitly set.
+  public var hasPromoteFollowedGroups: Bool {return self._promoteFollowedGroups != nil}
+  /// Clears the value of `promoteFollowedGroups`. Subsequent reads from it will return its default value.
+  public mutating func clearPromoteFollowedGroups() {self._promoteFollowedGroups = nil}
+
+  public var selfOnly: Bool {
+    get {return _selfOnly ?? false}
+    set {_selfOnly = newValue}
+  }
+  /// Returns true if `selfOnly` has been explicitly set.
+  public var hasSelfOnly: Bool {return self._selfOnly != nil}
+  /// Clears the value of `selfOnly`. Subsequent reads from it will return its default value.
+  public mutating func clearSelfOnly() {self._selfOnly = nil}
+
+  public var customOnly: Bool {
+    get {return _customOnly ?? false}
+    set {_customOnly = newValue}
+  }
+  /// Returns true if `customOnly` has been explicitly set.
+  public var hasCustomOnly: Bool {return self._customOnly != nil}
+  /// Clears the value of `customOnly`. Subsequent reads from it will return its default value.
+  public mutating func clearCustomOnly() {self._customOnly = nil}
+
+  public var refitOnly: Bool {
+    get {return _refitOnly ?? false}
+    set {_refitOnly = newValue}
+  }
+  /// Returns true if `refitOnly` has been explicitly set.
+  public var hasRefitOnly: Bool {return self._refitOnly != nil}
+  /// Clears the value of `refitOnly`. Subsequent reads from it will return its default value.
+  public mutating func clearRefitOnly() {self._refitOnly = nil}
+
+  public var dailyOnly: Bool {
+    get {return _dailyOnly ?? false}
+    set {_dailyOnly = newValue}
+  }
+  /// Returns true if `dailyOnly` has been explicitly set.
+  public var hasDailyOnly: Bool {return self._dailyOnly != nil}
+  /// Clears the value of `dailyOnly`. Subsequent reads from it will return its default value.
+  public mutating func clearDailyOnly() {self._dailyOnly = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
 
   fileprivate var _uid: String? = nil
   fileprivate var _coordinate: Proto_Coordinate2D? = nil
@@ -531,6 +640,15 @@ struct Proto_RequestFeed {
   fileprivate var _requestID: String? = nil
   fileprivate var _language: String? = nil
   fileprivate var _groupName: String? = nil
+  fileprivate var _isNewUser: Bool? = nil
+  fileprivate var _friendOnly: Bool? = nil
+  fileprivate var _withMixer: Bool? = nil
+  fileprivate var _withWatchState: Bool? = nil
+  fileprivate var _promoteFollowedGroups: Bool? = nil
+  fileprivate var _selfOnly: Bool? = nil
+  fileprivate var _customOnly: Bool? = nil
+  fileprivate var _refitOnly: Bool? = nil
+  fileprivate var _dailyOnly: Bool? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -548,8 +666,8 @@ extension Proto_RequestFeed: @unchecked Sendable {}
 fileprivate let _protobuf_package = "proto"
 
 extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ThreadVideo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ThreadVideo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "creationTime"),
     2: .same(proto: "creatorUid"),
     3: .same(proto: "shareId"),
@@ -565,7 +683,7 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     19: .same(proto: "appId"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -589,7 +707,7 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -636,7 +754,7 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_ThreadVideo, rhs: Proto_ThreadVideo) -> Bool {
+  public static func ==(lhs: Proto_ThreadVideo, rhs: Proto_ThreadVideo) -> Bool {
     if lhs._creationTime != rhs._creationTime {return false}
     if lhs.creatorUid != rhs.creatorUid {return false}
     if lhs.shareID != rhs.shareID {return false}
@@ -656,8 +774,8 @@ extension Proto_ThreadVideo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
 }
 
 extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Thread"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Thread"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "creators"),
     2: .same(proto: "lastUpdateTime"),
     3: .same(proto: "origShareId"),
@@ -683,6 +801,10 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     28: .same(proto: "albumVideoThumbnailPath"),
     29: .same(proto: "placeLatitude"),
     30: .same(proto: "placeLongitude"),
+    31: .same(proto: "highlightShareId"),
+    32: .same(proto: "commenters"),
+    33: .same(proto: "likers"),
+    34: .same(proto: "tags"),
   ]
 
   fileprivate class _StorageClass {
@@ -711,6 +833,10 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     var _albumVideoThumbnailPath: String? = nil
     var _placeLatitude: Double? = nil
     var _placeLongitude: Double? = nil
+    var _highlightShareID: String? = nil
+    var _commenters: [String] = []
+    var _likers: [String] = []
+    var _tags: [String] = []
 
     static let defaultInstance = _StorageClass()
 
@@ -742,6 +868,10 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       _albumVideoThumbnailPath = source._albumVideoThumbnailPath
       _placeLatitude = source._placeLatitude
       _placeLongitude = source._placeLongitude
+      _highlightShareID = source._highlightShareID
+      _commenters = source._commenters
+      _likers = source._likers
+      _tags = source._tags
     }
   }
 
@@ -752,7 +882,7 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -785,13 +915,17 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         case 28: try { try decoder.decodeSingularStringField(value: &_storage._albumVideoThumbnailPath) }()
         case 29: try { try decoder.decodeSingularDoubleField(value: &_storage._placeLatitude) }()
         case 30: try { try decoder.decodeSingularDoubleField(value: &_storage._placeLongitude) }()
+        case 31: try { try decoder.decodeSingularStringField(value: &_storage._highlightShareID) }()
+        case 32: try { try decoder.decodeRepeatedStringField(value: &_storage._commenters) }()
+        case 33: try { try decoder.decodeRepeatedStringField(value: &_storage._likers) }()
+        case 34: try { try decoder.decodeRepeatedStringField(value: &_storage._tags) }()
         default: break
         }
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every if/case branch local when no optimizations
@@ -872,11 +1006,23 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       try { if let v = _storage._placeLongitude {
         try visitor.visitSingularDoubleField(value: v, fieldNumber: 30)
       } }()
+      try { if let v = _storage._highlightShareID {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 31)
+      } }()
+      if !_storage._commenters.isEmpty {
+        try visitor.visitRepeatedStringField(value: _storage._commenters, fieldNumber: 32)
+      }
+      if !_storage._likers.isEmpty {
+        try visitor.visitRepeatedStringField(value: _storage._likers, fieldNumber: 33)
+      }
+      if !_storage._tags.isEmpty {
+        try visitor.visitRepeatedStringField(value: _storage._tags, fieldNumber: 34)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Thread, rhs: Proto_Thread) -> Bool {
+  public static func ==(lhs: Proto_Thread, rhs: Proto_Thread) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -906,6 +1052,10 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         if _storage._albumVideoThumbnailPath != rhs_storage._albumVideoThumbnailPath {return false}
         if _storage._placeLatitude != rhs_storage._placeLatitude {return false}
         if _storage._placeLongitude != rhs_storage._placeLongitude {return false}
+        if _storage._highlightShareID != rhs_storage._highlightShareID {return false}
+        if _storage._commenters != rhs_storage._commenters {return false}
+        if _storage._likers != rhs_storage._likers {return false}
+        if _storage._tags != rhs_storage._tags {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -916,13 +1066,13 @@ extension Proto_Thread: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
 }
 
 extension Proto_ThreadAndVideoTuple: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ThreadAndVideoTuple"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ThreadAndVideoTuple"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "thread"),
     2: .same(proto: "threadVideo"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -935,7 +1085,7 @@ extension Proto_ThreadAndVideoTuple: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -949,7 +1099,7 @@ extension Proto_ThreadAndVideoTuple: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_ThreadAndVideoTuple, rhs: Proto_ThreadAndVideoTuple) -> Bool {
+  public static func ==(lhs: Proto_ThreadAndVideoTuple, rhs: Proto_ThreadAndVideoTuple) -> Bool {
     if lhs._thread != rhs._thread {return false}
     if lhs._threadVideo != rhs._threadVideo {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -958,14 +1108,14 @@ extension Proto_ThreadAndVideoTuple: SwiftProtobuf.Message, SwiftProtobuf._Messa
 }
 
 extension Proto_ResponseFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseFeed"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseFeed"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "errCode"),
     2: .same(proto: "errMsg"),
     3: .same(proto: "data"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -979,7 +1129,7 @@ extension Proto_ResponseFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.errCode.isEmpty {
       try visitor.visitSingularStringField(value: self.errCode, fieldNumber: 1)
     }
@@ -992,7 +1142,7 @@ extension Proto_ResponseFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_ResponseFeed, rhs: Proto_ResponseFeed) -> Bool {
+  public static func ==(lhs: Proto_ResponseFeed, rhs: Proto_ResponseFeed) -> Bool {
     if lhs.errCode != rhs.errCode {return false}
     if lhs.errMsg != rhs.errMsg {return false}
     if lhs.data != rhs.data {return false}
@@ -1002,14 +1152,14 @@ extension Proto_ResponseFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
 }
 
 extension Proto_ResponseNewestThreads: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseNewestThreads"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseNewestThreads"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "ErrCode"),
     2: .same(proto: "ErrMsg"),
     3: .same(proto: "Datas"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1023,7 +1173,7 @@ extension Proto_ResponseNewestThreads: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.errCode.isEmpty {
       try visitor.visitSingularStringField(value: self.errCode, fieldNumber: 1)
     }
@@ -1036,7 +1186,7 @@ extension Proto_ResponseNewestThreads: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_ResponseNewestThreads, rhs: Proto_ResponseNewestThreads) -> Bool {
+  public static func ==(lhs: Proto_ResponseNewestThreads, rhs: Proto_ResponseNewestThreads) -> Bool {
     if lhs.errCode != rhs.errCode {return false}
     if lhs.errMsg != rhs.errMsg {return false}
     if lhs.datas != rhs.datas {return false}
@@ -1046,13 +1196,13 @@ extension Proto_ResponseNewestThreads: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Proto_Coordinate2D: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Coordinate2D"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Coordinate2D"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "latitude"),
     2: .same(proto: "longitude"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1065,7 +1215,7 @@ extension Proto_Coordinate2D: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.latitude != 0 {
       try visitor.visitSingularDoubleField(value: self.latitude, fieldNumber: 1)
     }
@@ -1075,7 +1225,7 @@ extension Proto_Coordinate2D: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Coordinate2D, rhs: Proto_Coordinate2D) -> Bool {
+  public static func ==(lhs: Proto_Coordinate2D, rhs: Proto_Coordinate2D) -> Bool {
     if lhs.latitude != rhs.latitude {return false}
     if lhs.longitude != rhs.longitude {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1084,17 +1234,26 @@ extension Proto_Coordinate2D: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
 }
 
 extension Proto_RequestFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestFeed"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestFeed"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "uid"),
     2: .same(proto: "coordinate"),
     3: .same(proto: "appID"),
     4: .same(proto: "requestID"),
     5: .same(proto: "language"),
     6: .same(proto: "groupName"),
+    7: .same(proto: "isNewUser"),
+    8: .same(proto: "friendOnly"),
+    9: .same(proto: "withMixer"),
+    10: .same(proto: "withWatchState"),
+    11: .same(proto: "promoteFollowedGroups"),
+    12: .same(proto: "selfOnly"),
+    13: .same(proto: "customOnly"),
+    14: .same(proto: "refitOnly"),
+    15: .same(proto: "dailyOnly"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1106,12 +1265,21 @@ extension Proto_RequestFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
       case 4: try { try decoder.decodeSingularStringField(value: &self._requestID) }()
       case 5: try { try decoder.decodeSingularStringField(value: &self._language) }()
       case 6: try { try decoder.decodeSingularStringField(value: &self._groupName) }()
+      case 7: try { try decoder.decodeSingularBoolField(value: &self._isNewUser) }()
+      case 8: try { try decoder.decodeSingularBoolField(value: &self._friendOnly) }()
+      case 9: try { try decoder.decodeSingularBoolField(value: &self._withMixer) }()
+      case 10: try { try decoder.decodeSingularBoolField(value: &self._withWatchState) }()
+      case 11: try { try decoder.decodeSingularBoolField(value: &self._promoteFollowedGroups) }()
+      case 12: try { try decoder.decodeSingularBoolField(value: &self._selfOnly) }()
+      case 13: try { try decoder.decodeSingularBoolField(value: &self._customOnly) }()
+      case 14: try { try decoder.decodeSingularBoolField(value: &self._refitOnly) }()
+      case 15: try { try decoder.decodeSingularBoolField(value: &self._dailyOnly) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1134,16 +1302,52 @@ extension Proto_RequestFeed: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     try { if let v = self._groupName {
       try visitor.visitSingularStringField(value: v, fieldNumber: 6)
     } }()
+    try { if let v = self._isNewUser {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 7)
+    } }()
+    try { if let v = self._friendOnly {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 8)
+    } }()
+    try { if let v = self._withMixer {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 9)
+    } }()
+    try { if let v = self._withWatchState {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 10)
+    } }()
+    try { if let v = self._promoteFollowedGroups {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 11)
+    } }()
+    try { if let v = self._selfOnly {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 12)
+    } }()
+    try { if let v = self._customOnly {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 13)
+    } }()
+    try { if let v = self._refitOnly {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 14)
+    } }()
+    try { if let v = self._dailyOnly {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 15)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_RequestFeed, rhs: Proto_RequestFeed) -> Bool {
+  public static func ==(lhs: Proto_RequestFeed, rhs: Proto_RequestFeed) -> Bool {
     if lhs._uid != rhs._uid {return false}
     if lhs._coordinate != rhs._coordinate {return false}
     if lhs._appID != rhs._appID {return false}
     if lhs._requestID != rhs._requestID {return false}
     if lhs._language != rhs._language {return false}
     if lhs._groupName != rhs._groupName {return false}
+    if lhs._isNewUser != rhs._isNewUser {return false}
+    if lhs._friendOnly != rhs._friendOnly {return false}
+    if lhs._withMixer != rhs._withMixer {return false}
+    if lhs._withWatchState != rhs._withWatchState {return false}
+    if lhs._promoteFollowedGroups != rhs._promoteFollowedGroups {return false}
+    if lhs._selfOnly != rhs._selfOnly {return false}
+    if lhs._customOnly != rhs._customOnly {return false}
+    if lhs._refitOnly != rhs._refitOnly {return false}
+    if lhs._dailyOnly != rhs._dailyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -1,0 +1,49 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+message Posts {
+  repeated Post posts = 1;
+}
+
+message Post {
+  // The unique id that identifies the post.
+  string postID = 1;
+  // The unique id that identifies the thought.
+  repeated string thoughtID = 2;
+  // The unique id that identifies the group that post belongs to.
+  optional string groupID = 3;
+  // The start time of the post.
+  optional google.protobuf.Timestamp timestamp = 4;
+  // The original author uid that starts the post.
+  optional string uid = 5;
+  // Post state. Currently supported state: timeless, deleting
+  optional string state = 6;
+  // The language preference of the post
+  optional string language = 7;
+  // Title of the post, editable by author only
+  optional string title = 8;
+  // Descriptions of the post, editable by author only
+  optional string descriptions = 9;
+  // Hashtags of the post, editable by author only
+  repeated string hashtags = 10;
+  // Color of the post, editable by author only
+  optional string color = 11;
+  // Total likes count
+  optional int64 totalLikeCount = 12;
+  // Total shares count
+  optional int64 totalShareCount = 13;
+  // Total remix count
+  optional int64 totalRemixCount = 14;
+  // App bundle identifier
+  optional string appID = 15;
+  // Karma score of the post
+  optional double karma = 16;
+  // A score representing priority in feed
+  optional double feedScore = 17;
+}

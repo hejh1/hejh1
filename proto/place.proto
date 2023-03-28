@@ -3,6 +3,8 @@ syntax = "proto3";
 
 package proto;
 
+import "google/protobuf/timestamp.proto";
+
 option go_package = "github.com/oogwaylab/common/proto";
 
 message Places {
@@ -10,33 +12,34 @@ message Places {
 }
 
 message Place {
-  // A place id to the thread, based on google map definition
+  // The unique id that identifies the place.
   string placeID = 1;
-
-  // The start time of the thread.
-  optional int64 startTime = 2;
-  // The original author uid that starts the thread.
+  // The start time of the place.
+  optional google.protobuf.Timestamp startTime = 2;
+  // The original author uid that starts the place.
   optional string origUid = 3;
-  // The unique id that identifies the thread.
-  optional string threadId = 4;
-  // Descriptions of the thread, editable by author only
-  optional string descriptions = 5;
-  // Descriptions of the thread, editable by author only
-  optional string hashtags = 6;
-  // Thread state. Currently supported state: deleting
-  optional string state = 7;
-  // A place name tag to the thread
-  optional string placeName = 8;
+  // Descriptions of the place, editable by author only
+  optional string descriptions = 4;
+  // Descriptions of the place, editable by author only
+  repeated string hashtags = 5;
+  // Place state. Currently supported state: timeless, deleting
+  optional string state = 6;
+  // A place name tag to the place
+  optional string placeName = 7;
   // Karma score of the place
-  optional double placeLatitude = 9;
+  optional double placeLatitude = 8;
   // Karma score of the place
-  optional double placeLongitude = 10;
-  // A score representing priority in feed
-  optional double feedScore = 11;
+  optional double placeLongitude = 9;
+  // A place name tag to the place
+  optional string googlePlaceID = 10;
   // App bundle identifier
-  optional string appId = 12;
+  optional string appID = 11;
   // Karma score of the place
-  optional double karma = 13;
+  optional double karma = 12;
   // The number of total followers of the place
-  optional int64 followerCount = 14;
+  optional int64 followerCount = 13;
+  // The number of total posts of the place
+  optional int64 postCount = 14;
+  // A score representing priority in feed
+  optional double feedScore = 15;
 }

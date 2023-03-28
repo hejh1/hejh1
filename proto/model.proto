@@ -1,0 +1,30 @@
+//nolint
+syntax = "proto3";
+
+package proto;
+
+import "prompt.proto";
+
+option go_package = "github.com/oogwaylab/common/proto";
+
+enum ModelState {
+    INITIAL = 0;
+    TRAINING = 1;
+    TRAINED = 2;
+    FAILED = 3;
+    UNKNOWN = 4;
+}
+
+message Model {
+    optional string uid = 1;
+    optional string description = 2;
+    optional double version = 3;
+    optional ModelType modelType = 4;
+    optional ModelState modelState = 5;
+    optional string storagePath = 6;
+    optional string promptNegative = 7;
+    optional double trainingScore = 8;
+    optional double inferenceScore = 9;
+    optional string commitHash = 10;
+    optional string predictedToken = 11;
+}

@@ -22,173 +22,176 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Proto_Places {
+public struct Proto_Places {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var places: [Proto_Place] = []
+  public var places: [Proto_Place] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Proto_Place {
+public struct Proto_Place {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// A place id to the thread, based on google map definition
-  var placeID: String = String()
+  /// The unique id that identifies the place.
+  public var placeID: String = String()
 
-  /// The start time of the thread.
-  var startTime: Int64 {
-    get {return _startTime ?? 0}
+  /// The start time of the place.
+  public var startTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _startTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_startTime = newValue}
   }
   /// Returns true if `startTime` has been explicitly set.
-  var hasStartTime: Bool {return self._startTime != nil}
+  public var hasStartTime: Bool {return self._startTime != nil}
   /// Clears the value of `startTime`. Subsequent reads from it will return its default value.
-  mutating func clearStartTime() {self._startTime = nil}
+  public mutating func clearStartTime() {self._startTime = nil}
 
-  /// The original author uid that starts the thread.
-  var origUid: String {
+  /// The original author uid that starts the place.
+  public var origUid: String {
     get {return _origUid ?? String()}
     set {_origUid = newValue}
   }
   /// Returns true if `origUid` has been explicitly set.
-  var hasOrigUid: Bool {return self._origUid != nil}
+  public var hasOrigUid: Bool {return self._origUid != nil}
   /// Clears the value of `origUid`. Subsequent reads from it will return its default value.
-  mutating func clearOrigUid() {self._origUid = nil}
+  public mutating func clearOrigUid() {self._origUid = nil}
 
-  /// The unique id that identifies the thread.
-  var threadID: String {
-    get {return _threadID ?? String()}
-    set {_threadID = newValue}
-  }
-  /// Returns true if `threadID` has been explicitly set.
-  var hasThreadID: Bool {return self._threadID != nil}
-  /// Clears the value of `threadID`. Subsequent reads from it will return its default value.
-  mutating func clearThreadID() {self._threadID = nil}
-
-  /// Descriptions of the thread, editable by author only
-  var descriptions: String {
+  /// Descriptions of the place, editable by author only
+  public var descriptions: String {
     get {return _descriptions ?? String()}
     set {_descriptions = newValue}
   }
   /// Returns true if `descriptions` has been explicitly set.
-  var hasDescriptions: Bool {return self._descriptions != nil}
+  public var hasDescriptions: Bool {return self._descriptions != nil}
   /// Clears the value of `descriptions`. Subsequent reads from it will return its default value.
-  mutating func clearDescriptions() {self._descriptions = nil}
+  public mutating func clearDescriptions() {self._descriptions = nil}
 
-  /// Descriptions of the thread, editable by author only
-  var hashtags: String {
-    get {return _hashtags ?? String()}
-    set {_hashtags = newValue}
-  }
-  /// Returns true if `hashtags` has been explicitly set.
-  var hasHashtags: Bool {return self._hashtags != nil}
-  /// Clears the value of `hashtags`. Subsequent reads from it will return its default value.
-  mutating func clearHashtags() {self._hashtags = nil}
+  /// Descriptions of the place, editable by author only
+  public var hashtags: [String] = []
 
-  /// Thread state. Currently supported state: deleting
-  var state: String {
+  /// Place state. Currently supported state: timeless, deleting
+  public var state: String {
     get {return _state ?? String()}
     set {_state = newValue}
   }
   /// Returns true if `state` has been explicitly set.
-  var hasState: Bool {return self._state != nil}
+  public var hasState: Bool {return self._state != nil}
   /// Clears the value of `state`. Subsequent reads from it will return its default value.
-  mutating func clearState() {self._state = nil}
+  public mutating func clearState() {self._state = nil}
 
-  /// A place name tag to the thread
-  var placeName: String {
+  /// A place name tag to the place
+  public var placeName: String {
     get {return _placeName ?? String()}
     set {_placeName = newValue}
   }
   /// Returns true if `placeName` has been explicitly set.
-  var hasPlaceName: Bool {return self._placeName != nil}
+  public var hasPlaceName: Bool {return self._placeName != nil}
   /// Clears the value of `placeName`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceName() {self._placeName = nil}
+  public mutating func clearPlaceName() {self._placeName = nil}
 
   /// Karma score of the place
-  var placeLatitude: Double {
+  public var placeLatitude: Double {
     get {return _placeLatitude ?? 0}
     set {_placeLatitude = newValue}
   }
   /// Returns true if `placeLatitude` has been explicitly set.
-  var hasPlaceLatitude: Bool {return self._placeLatitude != nil}
+  public var hasPlaceLatitude: Bool {return self._placeLatitude != nil}
   /// Clears the value of `placeLatitude`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceLatitude() {self._placeLatitude = nil}
+  public mutating func clearPlaceLatitude() {self._placeLatitude = nil}
 
   /// Karma score of the place
-  var placeLongitude: Double {
+  public var placeLongitude: Double {
     get {return _placeLongitude ?? 0}
     set {_placeLongitude = newValue}
   }
   /// Returns true if `placeLongitude` has been explicitly set.
-  var hasPlaceLongitude: Bool {return self._placeLongitude != nil}
+  public var hasPlaceLongitude: Bool {return self._placeLongitude != nil}
   /// Clears the value of `placeLongitude`. Subsequent reads from it will return its default value.
-  mutating func clearPlaceLongitude() {self._placeLongitude = nil}
+  public mutating func clearPlaceLongitude() {self._placeLongitude = nil}
 
-  /// A score representing priority in feed
-  var feedScore: Double {
-    get {return _feedScore ?? 0}
-    set {_feedScore = newValue}
+  /// A place name tag to the place
+  public var googlePlaceID: String {
+    get {return _googlePlaceID ?? String()}
+    set {_googlePlaceID = newValue}
   }
-  /// Returns true if `feedScore` has been explicitly set.
-  var hasFeedScore: Bool {return self._feedScore != nil}
-  /// Clears the value of `feedScore`. Subsequent reads from it will return its default value.
-  mutating func clearFeedScore() {self._feedScore = nil}
+  /// Returns true if `googlePlaceID` has been explicitly set.
+  public var hasGooglePlaceID: Bool {return self._googlePlaceID != nil}
+  /// Clears the value of `googlePlaceID`. Subsequent reads from it will return its default value.
+  public mutating func clearGooglePlaceID() {self._googlePlaceID = nil}
 
   /// App bundle identifier
-  var appID: String {
+  public var appID: String {
     get {return _appID ?? String()}
     set {_appID = newValue}
   }
   /// Returns true if `appID` has been explicitly set.
-  var hasAppID: Bool {return self._appID != nil}
+  public var hasAppID: Bool {return self._appID != nil}
   /// Clears the value of `appID`. Subsequent reads from it will return its default value.
-  mutating func clearAppID() {self._appID = nil}
+  public mutating func clearAppID() {self._appID = nil}
 
   /// Karma score of the place
-  var karma: Double {
+  public var karma: Double {
     get {return _karma ?? 0}
     set {_karma = newValue}
   }
   /// Returns true if `karma` has been explicitly set.
-  var hasKarma: Bool {return self._karma != nil}
+  public var hasKarma: Bool {return self._karma != nil}
   /// Clears the value of `karma`. Subsequent reads from it will return its default value.
-  mutating func clearKarma() {self._karma = nil}
+  public mutating func clearKarma() {self._karma = nil}
 
   /// The number of total followers of the place
-  var followerCount: Int64 {
+  public var followerCount: Int64 {
     get {return _followerCount ?? 0}
     set {_followerCount = newValue}
   }
   /// Returns true if `followerCount` has been explicitly set.
-  var hasFollowerCount: Bool {return self._followerCount != nil}
+  public var hasFollowerCount: Bool {return self._followerCount != nil}
   /// Clears the value of `followerCount`. Subsequent reads from it will return its default value.
-  mutating func clearFollowerCount() {self._followerCount = nil}
+  public mutating func clearFollowerCount() {self._followerCount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  /// The number of total posts of the place
+  public var postCount: Int64 {
+    get {return _postCount ?? 0}
+    set {_postCount = newValue}
+  }
+  /// Returns true if `postCount` has been explicitly set.
+  public var hasPostCount: Bool {return self._postCount != nil}
+  /// Clears the value of `postCount`. Subsequent reads from it will return its default value.
+  public mutating func clearPostCount() {self._postCount = nil}
 
-  init() {}
+  /// A score representing priority in feed
+  public var feedScore: Double {
+    get {return _feedScore ?? 0}
+    set {_feedScore = newValue}
+  }
+  /// Returns true if `feedScore` has been explicitly set.
+  public var hasFeedScore: Bool {return self._feedScore != nil}
+  /// Clears the value of `feedScore`. Subsequent reads from it will return its default value.
+  public mutating func clearFeedScore() {self._feedScore = nil}
 
-  fileprivate var _startTime: Int64? = nil
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _startTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _origUid: String? = nil
-  fileprivate var _threadID: String? = nil
   fileprivate var _descriptions: String? = nil
-  fileprivate var _hashtags: String? = nil
   fileprivate var _state: String? = nil
   fileprivate var _placeName: String? = nil
   fileprivate var _placeLatitude: Double? = nil
   fileprivate var _placeLongitude: Double? = nil
-  fileprivate var _feedScore: Double? = nil
+  fileprivate var _googlePlaceID: String? = nil
   fileprivate var _appID: String? = nil
   fileprivate var _karma: Double? = nil
   fileprivate var _followerCount: Int64? = nil
+  fileprivate var _postCount: Int64? = nil
+  fileprivate var _feedScore: Double? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -201,12 +204,12 @@ extension Proto_Place: @unchecked Sendable {}
 fileprivate let _protobuf_package = "proto"
 
 extension Proto_Places: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Places"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Places"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "places"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -218,14 +221,14 @@ extension Proto_Places: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.places.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.places, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Places, rhs: Proto_Places) -> Bool {
+  public static func ==(lhs: Proto_Places, rhs: Proto_Places) -> Bool {
     if lhs.places != rhs.places {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -233,50 +236,52 @@ extension Proto_Places: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
 }
 
 extension Proto_Place: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Place"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Place"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "placeID"),
     2: .same(proto: "startTime"),
     3: .same(proto: "origUid"),
-    4: .same(proto: "threadId"),
-    5: .same(proto: "descriptions"),
-    6: .same(proto: "hashtags"),
-    7: .same(proto: "state"),
-    8: .same(proto: "placeName"),
-    9: .same(proto: "placeLatitude"),
-    10: .same(proto: "placeLongitude"),
-    11: .same(proto: "feedScore"),
-    12: .same(proto: "appId"),
-    13: .same(proto: "karma"),
-    14: .same(proto: "followerCount"),
+    4: .same(proto: "descriptions"),
+    5: .same(proto: "hashtags"),
+    6: .same(proto: "state"),
+    7: .same(proto: "placeName"),
+    8: .same(proto: "placeLatitude"),
+    9: .same(proto: "placeLongitude"),
+    10: .same(proto: "googlePlaceID"),
+    11: .same(proto: "appID"),
+    12: .same(proto: "karma"),
+    13: .same(proto: "followerCount"),
+    14: .same(proto: "postCount"),
+    15: .same(proto: "feedScore"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.placeID) }()
-      case 2: try { try decoder.decodeSingularInt64Field(value: &self._startTime) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._startTime) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self._origUid) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self._threadID) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self._descriptions) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self._hashtags) }()
-      case 7: try { try decoder.decodeSingularStringField(value: &self._state) }()
-      case 8: try { try decoder.decodeSingularStringField(value: &self._placeName) }()
-      case 9: try { try decoder.decodeSingularDoubleField(value: &self._placeLatitude) }()
-      case 10: try { try decoder.decodeSingularDoubleField(value: &self._placeLongitude) }()
-      case 11: try { try decoder.decodeSingularDoubleField(value: &self._feedScore) }()
-      case 12: try { try decoder.decodeSingularStringField(value: &self._appID) }()
-      case 13: try { try decoder.decodeSingularDoubleField(value: &self._karma) }()
-      case 14: try { try decoder.decodeSingularInt64Field(value: &self._followerCount) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self._descriptions) }()
+      case 5: try { try decoder.decodeRepeatedStringField(value: &self.hashtags) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self._state) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self._placeName) }()
+      case 8: try { try decoder.decodeSingularDoubleField(value: &self._placeLatitude) }()
+      case 9: try { try decoder.decodeSingularDoubleField(value: &self._placeLongitude) }()
+      case 10: try { try decoder.decodeSingularStringField(value: &self._googlePlaceID) }()
+      case 11: try { try decoder.decodeSingularStringField(value: &self._appID) }()
+      case 12: try { try decoder.decodeSingularDoubleField(value: &self._karma) }()
+      case 13: try { try decoder.decodeSingularInt64Field(value: &self._followerCount) }()
+      case 14: try { try decoder.decodeSingularInt64Field(value: &self._postCount) }()
+      case 15: try { try decoder.decodeSingularDoubleField(value: &self._feedScore) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -285,62 +290,66 @@ extension Proto_Place: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementati
       try visitor.visitSingularStringField(value: self.placeID, fieldNumber: 1)
     }
     try { if let v = self._startTime {
-      try visitor.visitSingularInt64Field(value: v, fieldNumber: 2)
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     } }()
     try { if let v = self._origUid {
       try visitor.visitSingularStringField(value: v, fieldNumber: 3)
     } }()
-    try { if let v = self._threadID {
+    try { if let v = self._descriptions {
       try visitor.visitSingularStringField(value: v, fieldNumber: 4)
     } }()
-    try { if let v = self._descriptions {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 5)
-    } }()
-    try { if let v = self._hashtags {
+    if !self.hashtags.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.hashtags, fieldNumber: 5)
+    }
+    try { if let v = self._state {
       try visitor.visitSingularStringField(value: v, fieldNumber: 6)
     } }()
-    try { if let v = self._state {
+    try { if let v = self._placeName {
       try visitor.visitSingularStringField(value: v, fieldNumber: 7)
     } }()
-    try { if let v = self._placeName {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 8)
-    } }()
     try { if let v = self._placeLatitude {
-      try visitor.visitSingularDoubleField(value: v, fieldNumber: 9)
+      try visitor.visitSingularDoubleField(value: v, fieldNumber: 8)
     } }()
     try { if let v = self._placeLongitude {
-      try visitor.visitSingularDoubleField(value: v, fieldNumber: 10)
+      try visitor.visitSingularDoubleField(value: v, fieldNumber: 9)
     } }()
-    try { if let v = self._feedScore {
-      try visitor.visitSingularDoubleField(value: v, fieldNumber: 11)
+    try { if let v = self._googlePlaceID {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 10)
     } }()
     try { if let v = self._appID {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 12)
+      try visitor.visitSingularStringField(value: v, fieldNumber: 11)
     } }()
     try { if let v = self._karma {
-      try visitor.visitSingularDoubleField(value: v, fieldNumber: 13)
+      try visitor.visitSingularDoubleField(value: v, fieldNumber: 12)
     } }()
     try { if let v = self._followerCount {
+      try visitor.visitSingularInt64Field(value: v, fieldNumber: 13)
+    } }()
+    try { if let v = self._postCount {
       try visitor.visitSingularInt64Field(value: v, fieldNumber: 14)
+    } }()
+    try { if let v = self._feedScore {
+      try visitor.visitSingularDoubleField(value: v, fieldNumber: 15)
     } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Proto_Place, rhs: Proto_Place) -> Bool {
+  public static func ==(lhs: Proto_Place, rhs: Proto_Place) -> Bool {
     if lhs.placeID != rhs.placeID {return false}
     if lhs._startTime != rhs._startTime {return false}
     if lhs._origUid != rhs._origUid {return false}
-    if lhs._threadID != rhs._threadID {return false}
     if lhs._descriptions != rhs._descriptions {return false}
-    if lhs._hashtags != rhs._hashtags {return false}
+    if lhs.hashtags != rhs.hashtags {return false}
     if lhs._state != rhs._state {return false}
     if lhs._placeName != rhs._placeName {return false}
     if lhs._placeLatitude != rhs._placeLatitude {return false}
     if lhs._placeLongitude != rhs._placeLongitude {return false}
-    if lhs._feedScore != rhs._feedScore {return false}
+    if lhs._googlePlaceID != rhs._googlePlaceID {return false}
     if lhs._appID != rhs._appID {return false}
     if lhs._karma != rhs._karma {return false}
     if lhs._followerCount != rhs._followerCount {return false}
+    if lhs._postCount != rhs._postCount {return false}
+    if lhs._feedScore != rhs._feedScore {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
